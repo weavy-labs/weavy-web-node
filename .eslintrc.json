@@ -1,0 +1,48 @@
+{
+    "root": true,
+    "extends": [
+      "eslint:recommended",
+      "plugin:wc/recommended",
+      "plugin:lit/recommended",
+      "plugin:lit-a11y/recommended"
+    ],
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+    },
+    "plugins": [
+      "lit-a11y"
+    ],
+    "env": {
+      "browser": true
+    },
+    "globals": {
+      "WEAVY_URL": "readonly",
+      "WEAVY_SOURCE_NAME": "readonly",
+      "WEAVY_VERSION": "readonly"
+    },
+    "rules": {
+      "no-prototype-builtins": "off",
+      "no-unused-vars": [
+        "warn",
+        {
+          "argsIgnorePattern": "^_"
+        }
+      ],
+      "lit-a11y/no-autofocus": "warn",
+      "lit-a11y/click-events-have-key-events": "warn",
+      "lit-a11y/anchor-is-valid": "warn"
+    },
+    "ignorePatterns": [
+      "dist/"
+    ],
+    "overrides": [
+      {
+        "files": "server/**/*.[mc]js",
+        "env": {
+          "node": true,
+          "es6": true
+        }
+      }
+    ]
+  }

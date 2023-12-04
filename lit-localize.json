@@ -1,0 +1,17 @@
+{
+    "$schema": "https://raw.githubusercontent.com/lit/lit/main/packages/localize-tools/config.schema.json",
+    "tsConfig": "node_modules/@weavy/uikit-web/tsconfig.json",
+    "sourceLocale": "en",
+    "targetLocales": [
+      "xx-pirate"
+    ],
+    "output": {
+      "mode": "runtime",
+      "language": "js",
+      "outputDir": "./client/locales/"
+    },
+    "interchange": {
+      "format": "xliff",
+      "xliffDir": "./xliff/"
+    }
+  }
