@@ -13,11 +13,11 @@ const tokenFactory = async (refresh) => {
   }
 };
 
-const weavy = new Weavy({
-  url: WEAVY_URL,
-});
+const weavy = new Weavy();
 
+weavy.url = WEAVY_URL,
 weavy.tokenFactory = tokenFactory;
+
 weavy.locales = ["xx-pirate"];
 
 document.addEventListener("locale", (e) => {

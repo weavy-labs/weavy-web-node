@@ -29,7 +29,7 @@ class AcmeAside extends LitElement {
                         <h6 class="sidebar-heading px-3 mt-3 mb-1 text-muted text-uppercase">Weavy apps</h6>
 
                         <a class="nav-link" href="/chat.html"><span data-feather="message-circle"></span> Chat</a>
-                        <a class="nav-link" href="/feed.html"><span data-feather="columns"></span> Feed</a>
+                        <a class="nav-link" href="/posts.html"><span data-feather="columns"></span> Posts</a>
                         <a class="nav-link" href="/files.html"><span data-feather="folder"></span> Files</a>
 
                         <h6 class="sidebar-heading px-3 mt-3 mb-1 text-muted text-uppercase">Examples</h6>

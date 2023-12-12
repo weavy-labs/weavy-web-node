@@ -1,7 +1,11 @@
+/**
+ * Configuration and startup for the @web/dev-server using the KOA middleware for API endpoints.
+ */
+
 import "dotenv/config";
 import { startDevServer } from "@web/dev-server";
 import { esbuildPlugin } from "@web/dev-server-esbuild";
-import authKoaMiddleware from "./auth-koa-middleware.mjs";
+import koaMiddleware from "./koa-middleware.mjs";
 
 const WEB_PORT = process.env.AUTH_PORT || 3000;
 
@@ -45,7 +49,7 @@ async function main() {
   // Needed for Socket.IO
   koaApp.server = server;
 
-  koaApp.use(authKoaMiddleware(koaApp, webSockets.webSocketServer));
+  koaApp.use(koaMiddleware(koaApp, webSockets.webSocketServer));
 }
 
 main();

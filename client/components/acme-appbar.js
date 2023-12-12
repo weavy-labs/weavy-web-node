@@ -94,7 +94,7 @@ class AcmeAppbar extends LitElement {
             <a class="nav-link d-md-none" href="#" data-bs-toggle="offcanvas" data-bs-target="#menu"
               ><span data-feather="menu"></span
             ></a>
-            <a href="/"><img src="/public/logo.png" height="32" alt="logo" /></a>
+            <a href="/"><img id="logo" src="/public/logo${this.locale === "xx-pirate" ? "-pirate" : ""}.png" height="32" alt="logo" /></a>
           </div>
 
           <div class="navbar-nav align-items-center">

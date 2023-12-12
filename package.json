@@ -1,6 +1,6 @@
 {
   "name": "web-components-server",
-  "version": "19.0.0",
+  "version": "19.0.1",
   "author": "Weavy",
   "description": "",
   "main": "client/index.js",
@@ -15,7 +15,7 @@
   "keywords": [],
   "license": "MIT",
   "dependencies": {
-    "@weavy/uikit-web": "^19.0.0",
+    "@weavy/uikit-web": "^19.0.1",
     "bootstrap": "^5.3.2",
     "lit": "^3.1.0",
     "socket.io-client": "^4.5.4"
@@ -25,7 +25,7 @@
     "@web/dev-server": "^0.3.7",
     "@web/dev-server-esbuild": "^1.0.1",
     "dotenv": "^16.3.1",
-    "eslint": "^8.54.0",
+    "eslint": "^8.55.0",
     "eslint-plugin-lit": "^1.10.1",
     "eslint-plugin-lit-a11y": "^4.1.1",
     "eslint-plugin-wc": "^2.0.4",

@@ -63,7 +63,7 @@ class AcmeNotifications extends LitElement {
             await this.handleRead(id, true, false)
         } else if (response.status === 200) {
             //await this.getNotifications(false)
-            location.href = type == "message" ? "/chat.html" : type == "post" ? "/feed.html" : "files.html";
+            location.href = type == "message" ? "/chat.html" : type == "post" ? "/posts.html" : "files.html";
         } else {
             console.error('Could not mark single notification as read')
         }

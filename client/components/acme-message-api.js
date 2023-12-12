@@ -33,21 +33,27 @@ class AcmeMessageApi extends LitElement {
     const input = this.inputRef.value;
     const text = input.value;
 
-    var messageResponse = await fetch(`/api/examples/messages`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        id: this.appId,
-        text: text,
-      }),
-    });
-    if (messageResponse.ok) {
-      var messageJson = await messageResponse.json();
+    try {
+      const messageResponse = await fetch(`/api/examples/messages`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          id: this.appId,
+          text: text,
+        }),
+      });
+      
+      if (!messageResponse.ok) {
+        throw new Error("Network response was not OK");
+      }
+  
+      const messageJson = await messageResponse.json();
       this.result = JSON.stringify(messageJson, null, 3);
-    } else {
-      console.error("Could not submit message to Weavy");
+
+    } catch (error) {
+      console.error("Could not submit message to Weavy:", error);
     }
   }
 
