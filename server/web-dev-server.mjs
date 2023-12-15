@@ -7,7 +7,9 @@ import { startDevServer } from "@web/dev-server";
 import { esbuildPlugin } from "@web/dev-server-esbuild";
 import koaMiddleware from "./koa-middleware.mjs";
 
-const WEB_PORT = process.env.AUTH_PORT || 3000;
+const WEB_HOSTNAME = process.env.HOSTNAME || 'localhost';
+const WEB_PORT = parseInt(process.env.PORT) || 3000;
+const HTTPS = process.env.HTTPS !== false && process.env.HTTPS !== 'false';
 
 const DEBUG = process.env.DEBUG || false;
 
@@ -23,6 +25,7 @@ async function main() {
       //appIndex: './client/index.html',
       rootDir: "./client",
       debug: DEBUG,
+      hostname: WEB_HOSTNAME,
       port: WEB_PORT,
       plugins: [
         esbuildPlugin({
@@ -42,6 +45,9 @@ async function main() {
           },
         },
       ],
+      http2: HTTPS,
+      sslKey: process.env.HTTPS_PEM_KEY_PATH,
+      sslCert: process.env.HTTPS_PEM_CERT_PATH
     },
     readFileConfig: false,
   });

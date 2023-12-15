@@ -40,3 +40,12 @@ Open [http://localhost:3000](http://localhost:3000) with your browser. To login 
   
 * username: `admin`, `bugs`, `daffy`, `porky`, `tweety`, `wile`, or `meepmeep`
 * password: `acme`
+
+### HTTPS configuration
+
+You can optionally provide your own certificate for `HTTPS`.
+
+```ini
+HTTPS_PEM_KEY_PATH="/path/to/your/pem.key"
+HTTPS_PEM_CERT_PATH="/path/to/your/pem.cert"
+```
