@@ -1,6 +1,6 @@
 {
   "name": "web-components-server",
-  "version": "19.0.6",
+  "version": "19.1.0",
   "author": "Weavy",
   "description": "",
   "main": "client/index.js",
@@ -16,18 +16,18 @@
   "license": "MIT",
   "dependencies": {
     "@popperjs/core": "^2.11.8",
-    "@weavy/uikit-web": "^19.0.6",
+    "@weavy/uikit-web": "^19.1.0",
     "bootstrap": "^5.3.2",
-    "lit": "^3.1.0",
-    "socket.io-client": "^4.5.4"
+    "lit": "^3.1.1",
+    "socket.io-client": "^4.7.4"
   },
   "devDependencies": {
     "@lit/localize-tools": "^0.7.1",
     "@web/dev-server": "^0.3.7",
     "@web/dev-server-esbuild": "^1.0.1",
     "dotenv": "^16.3.1",
-    "eslint": "^8.55.0",
-    "eslint-plugin-lit": "^1.10.1",
+    "eslint": "^8.56.0",
+    "eslint-plugin-lit": "^1.11.0",
     "eslint-plugin-lit-a11y": "^4.1.1",
     "eslint-plugin-wc": "^2.0.4",
     "koa-body": "^6.0.1",
@@ -39,7 +39,7 @@
     "koa-userauth": "^2.2.0",
     "node-fetch": "^3.3.0",
     "node-json-db": "^2.3.0",
-    "sass": "^1.69.5"
+    "sass": "^1.69.7"
   },
   "engines": {
     "node": ">=19.3.0",

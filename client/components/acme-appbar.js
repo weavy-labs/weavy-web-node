@@ -146,7 +146,7 @@ class AcmeAppbar extends LitElement {
                 : nothing}
 
               <div class="dropdown-menu dropdown-menu-end">
-                <div class="text-center pt-4 pb-3">
+                <div class="align-items-center d-inline-flex flex-column pb-3 pt-4 w-100">
                   ${this.user
                     ? html`
                         <wy-avatar name=${this.user.name ?? ""} src=${this.user.avatar || null} size="64"></wy-avatar>
