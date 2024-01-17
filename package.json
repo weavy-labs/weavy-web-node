@@ -1,6 +1,6 @@
 {
   "name": "web-components-server",
-  "version": "19.1.0",
+  "version": "19.1.1",
   "author": "Weavy",
   "description": "",
   "main": "client/index.js",
@@ -16,7 +16,7 @@
   "license": "MIT",
   "dependencies": {
     "@popperjs/core": "^2.11.8",
-    "@weavy/uikit-web": "^19.1.0",
+    "@weavy/uikit-web": "^19.1.1",
     "bootstrap": "^5.3.2",
     "lit": "^3.1.1",
     "socket.io-client": "^4.7.4"
